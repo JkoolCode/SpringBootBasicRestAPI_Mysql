@@ -10,4 +10,6 @@ public interface IClienteDAO extends JpaRepository<Cliente, Long>{
 		  ,nativeQuery = true)
 	public Cliente findByDni(String dni);
 	
+	//Como llamar a un procedimiento almacenado
+	
 }

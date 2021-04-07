@@ -19,6 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.practice.apirest.models.entities.Cliente;
 import com.practice.apirest.models.services.IClienteService;
 
+import springfox.documentation.annotations.ApiIgnore;
+
 @RestController
 @RequestMapping("/api")
 public class ClienteController {
