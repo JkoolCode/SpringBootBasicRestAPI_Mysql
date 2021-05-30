@@ -1,4 +1,5 @@
 package com.practice.apirest.models.services;
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +9,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.practice.apirest.models.daos.IClienteDAO;
+import com.practice.apirest.models.dto.ClienteFindDTO;
 import com.practice.apirest.models.entities.Cliente;
+import com.practice.apirest.models.entities.Region;
 
 @Service
 public class ClienteServiceImpl implements IClienteService {
@@ -51,6 +54,16 @@ public class ClienteServiceImpl implements IClienteService {
 		clienteDao.deleteById(id);
 	}
 
-	
+	@Override
+	@Transactional(readOnly = true)
+	public List<Region> findAllRegiones() {
+		return clienteDao.findAllRegiones();
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Cliente> getClientesByRgion(ClienteFindDTO clienteFindDTO) {
+		return clienteDao.getClientesByRgion(clienteFindDTO.getRegion_id(), clienteFindDTO.getPuntos());
+	}
 	
 }

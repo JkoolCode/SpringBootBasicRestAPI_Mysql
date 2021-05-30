@@ -1,9 +1,11 @@
 package com.practice.apirest.models.services;
-
 import java.util.List;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Page;
+
+import com.practice.apirest.models.dto.ClienteFindDTO;
 import com.practice.apirest.models.entities.Cliente;
+import com.practice.apirest.models.entities.Region;
 
 public interface IClienteService {
 	
@@ -18,5 +20,9 @@ public interface IClienteService {
 	public Cliente save(Cliente cliente);
 	
 	public void delete(Long id);
+	
+	public List<Region> findAllRegiones();
+	
+	public List<Cliente> getClientesByRgion(ClienteFindDTO clienteFindDTO);
 	
 }
