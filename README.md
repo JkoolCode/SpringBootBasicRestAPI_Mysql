@@ -2,8 +2,7 @@
 This is a small and basic REST API based on Client Entity. Also, it's possible to manage a CRUD connected with MYSQL.
 
 You can call:
-
-- store procedures
+- Store procedures
 - JPA query
 - Native SQL query
 
