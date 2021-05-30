@@ -6,6 +6,10 @@ You can call:
 - JPA query
 - Native SQL query
 
-Moreover, I've been adding features of *Spring Security* for Authorization purpose and accessing resources (endpoints).
+Moreover, I've been adding features of *Spring Security* for Authorization purpose:
+- Generate a JWT encrypted in RSA algorithm (private and public key).
+- Accessing resources (endpoints)
 
 In addition, there is a swagger-ui for API Documentation and Test.
+
+:shipit: Programación Jkool Code :+1:
